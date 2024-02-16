@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/stylesheets/menu.css">
+
+<div class="menu">
+    <img draggable="false" class="logo" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/pinterest-512.png">
+    <a class="home">Home</a>
+
+    <a style="text-decoration: none;" class="home" href="/feed">Feed</a>
+    <input id="one" type="text" class="search-bar" placeholder="Search">
+    <button id="two" class="search-bar"></button>
+    <div class="icon-container">
+        <img tabindex="1" draggable="false" class="icon bell" src="https://i.hizliresim.com/rcvolcu.png">
+        <img tabindex="1" draggable="false" class="icon message" src="https://i.hizliresim.com/newumah.png">
+        <a href="/profile" style="display: flex;">
+            <img tabindex="1" draggable="false" class="icon pp profile-img-menu"
+                src="/images/uploads/<%= users.profileImage?users.profileImage:'default.png'  %>">
+        </a>
+        <img tabindex="1" draggable="false" class="icon btn" src="https://i.hizliresim.com/g15mqud.png">
+
+        <!----FOCUS----->
+        <div tabindex="1" class="focus-bar bell-bar">nothing</div>
+        <!-------------------->
+        <div tabindex="1" class="focus-bar message-bar">you are alone</div>
+        <!-------------------->
+        <div class=" pp-bar">
+
+        </div>
+        <!-------------------->
+        <div tabindex="1" class="focus-bar-menu btn-bar" style="display: flex; ">
+            <div class="vertical-menu">
+                <a href="/feed">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="/logout">Logout</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!--------------------------->
+<div class="responsive-search-bar">
+    <input type="text">
+    <p class="close">❌</p>
+</div>

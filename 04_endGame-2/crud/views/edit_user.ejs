@@ -1,0 +1,36 @@
+<%- include('Layout/header') %>
+
+    <div class="container">
+        <div class="row  justify-content-center  mt-5">
+            <div class="col-lg-6">
+                <form action="/update/<%= users._id %>" method="post" id="add-form" enctype="multipart/form-data">
+                    <h1 class="h3 mb-3 fw-normal">Edit User <%= users.name %></h1>
+
+                    <div class="form-floating mb-2">
+                        <input required name="name" type="text" class="form-control" id="floatingInput"
+                            placeholder="Enter Name" value="<%= users.name %>">
+                        <label for="floatingInput">Enter Name</label>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <input required name="email" type="email" class="form-control" id="floatingPassword"
+                            placeholder="Enter Email" value="<%= users.email %>">
+                        <label for="floatingPassword">Enter Email</label>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <input required name="number" type="Enter Number" class="form-control" id="floatingPassword"
+                            placeholder="num" value="<%= users.phone %>">
+                        <label for="floatingPassword">Enter Number</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label" >Select Image</label>
+                        <input name="image" class="form-control" type="file" id="formFile">
+                        <img src="../uploads/<%= users.image %>"  class="img-thumbnail mt-1 object-fit-cover rounded overflow-hidden img-fluid" alt="" srcset="" width="70px">
+                        <input type="hidden" name="old_img" value="<%= users.image %>">
+                    </div>
+                    <button class="btn btn-success w-100 py-2" type="submit">Update User</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include('Layout/footer') %>

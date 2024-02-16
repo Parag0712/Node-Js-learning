@@ -1,0 +1,25 @@
+<% include ./partials/header.ejs %>
+<link rel="stylesheet" href="/stylesheets/preview.css">
+
+<div class="container">
+    
+    <div class="card">
+        <div class="card-left">
+            <img src="/images/uploads/<%= post.postimage%>" alt="">
+        </div>
+
+        <div class="card-right">
+            <h1><%= post.posttitle %></h1>
+            <div class="post-details">
+                <p><%= post.user.username %></p>
+                <p>Created At: <%= post.createdAt %></p>
+            </div>
+            <p><%= post.postdescription %></p>
+            <div class="buttons">
+                <button class="button bookmark">Bookmark</button>
+                <button class="button save">Save</button>
+            </div>
+        </div>
+    </div>
+
+</div>

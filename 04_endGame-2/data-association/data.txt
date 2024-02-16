@@ -1,0 +1,9 @@
+data associations
+
+ek model se doosre model ke data ko jod dena id ke through,
+matlabki apke pass ek user hai to wo post banyega hi,
+jab post banega to user ke dwara hi banega,to ham kya karte hai jab do aise data aapas mein closely related 
+hote hai to hame apas mai jod dete hai ,ki ek model ke bane huye data ki id ko doosre model ke data ko dedete hai
+aur iss model ki data ki id pichle model ko dedete hai
+
+do models banao 

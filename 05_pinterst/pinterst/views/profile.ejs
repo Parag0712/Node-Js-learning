@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="/stylesheets/profile.css">
+<% include ./partials/header.ejs %>
+    <div class="containers">
+
+
+        <!-- Form START HERE -->
+        <form action="/profilepicupload" method="post" id="uploadform" enctype="multipart/form-data" hidden>
+            <input type="file" name="profileImage">
+        </form>
+        <!-- form END HERE -->
+
+        <div class="profile-details ">
+            <div class="img-container">
+                <span class="edit-icon" id="uploadicon"><i class="ri-pencil-fill"></i></span>
+                <img class="profile-img"
+                    src="/images/uploads/<%= users.profileImage?users.profileImage:'default.png'  %>" alt="">
+            </div>
+            <div class="profile-title">
+                <%= users.email %>
+            </div>
+            <h3 class="profile-username">@<%= users.username %>
+            </h3>
+            <div class="btns">
+                <a href="/createpins/" class=" btn-edit btn ">Create Pins</a>
+                <a href="/edit/" class=" btn-edit btn ">Edit Profile</a>
+            </div>
+        </div>
+        <div class="cards">
+
+            <% if(posts[0]){%>
+
+                <div class="card">
+                    <img class="card-img" src="/images/uploads/<%= posts[0]?.postimage || '' %>" alt="">
+                    <div class="card-details">
+                        <a href="/show/" style="text-decoration: none;"><h3 class="card-title">Your Pins</h3></a>
+                        <h5 class="card-pins-count">
+                            <%= posts.length ? posts.length : '0' %>
+                        </h5>
+                    </div>
+                </div>
+
+                <% }else{ %>
+                    <div class="card">
+                        <div class="card-details">
+                            <div class="card-img"
+                                style=" background-color: gainsboro; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bolder;">
+                                No Pins</div>
+                            <h3 class="card-title">Your Pins</h3>
+                            <h5 class="card-pins-count">
+                                <%= posts.length ? posts.length : '0' %>
+                            </h5>
+                        </div>
+                    </div>
+                    <% } %>
+
+                        <% posts.forEach((element,index,array)=> { %>
+                            <div class="card">
+                                <img src="/images/uploads/<%= element.postimage?element.postimage:'default.png'%>"
+                                    alt="">
+                                <div class="card-detials">
+                                    <h3 class="card-title">
+                                        <%= element.posttitle?element.posttitle:"Title" %>
+                                    </h3>
+                                    <h5 class="card-pins-count">
+                                        <%= element.postdescription?element.postdescription:"description"%>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <% }) %>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('#uploadicon').addEventListener("click", function () {
+            document.querySelector("#uploadform input").click();
+        })
+
+        document.querySelector("#uploadform input").addEventListener("change", function () {
+            document.querySelector("#uploadform").submit()
+        })
+    </script>
+    <% include ./partials/footer.ejs %>

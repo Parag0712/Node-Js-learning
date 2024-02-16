@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/stylesheets/feed.css">
+
+<div class="container">
+    <% posts.forEach((element, index) => { %>
+        <div class="box">
+
+            <a href="/preview/<%= element._id %>">
+                <img src="/images/uploads/<%= element.postimage %>" alt="<%= element.postimage %>"></a>
+            <div class="caption" style="color: black;">
+                <%= element.posttitle ? element.posttitle : '' %>
+            </div>
+            <div class="caption" style="color: black;">
+                <%= element.user ? element.user.username : '' %>
+            </div>
+        </div>
+    <% }) %>
+</div>

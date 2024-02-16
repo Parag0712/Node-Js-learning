@@ -1,0 +1,204 @@
+
+body {
+    font-family: "Inter", sans-serif;
+  }
+  
+  .formbold-mb-5 {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .formbold-pt-3 {
+    padding-top: 12px;
+  }
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+  
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    background: white;
+  }
+  .formbold-form-label {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    margin-bottom: 12px;
+  }
+  .formbold-form-label-2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .formbold-form-input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input:focus {
+    border-color: #df0812;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .formbold-btn {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 14px 32px;
+    border: none;
+    font-weight: 600;
+    background-color: #f30d19;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+  }
+  .formbold-btn:hover {
+    background-color: #df0812;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .formbold--mx-3 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .formbold-px-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .flex {
+    display: flex;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .w-full {
+    width: 100%;
+  }
+  
+  
+
+  .formbold-file-input input {
+    opacity: 0;
+    /* position: absolute; */
+    
+    /* width: 100%; */
+    /* height: 100%; */
+  }
+  
+  .formbold-file-input label {
+    position: relative;
+    
+    background-position: center;
+    background-size: cover;
+    border: 1px dashed #e0e0e0;
+    border-radius: 6px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    text-align: center;
+  }
+  .formbold-drop-file {
+    display: block;
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .formbold-or {
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .formbold-browse {
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    display: inline-block;
+    padding: 8px 28px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+  
+  .formbold-file-list {
+    border-radius: 6px;
+    background: #f5f7fb;
+    padding: 16px 32px;
+  }
+  
+  .formbold-file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .formbold-file-item button {
+    color: #07074d;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .formbold-file-name {
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    padding-right: 12px;
+  }
+  
+  @media (min-width: 540px) {
+    .sm\:w-half {
+      width: 50%;
+    }
+  }
+  
+  .form-divide{
+    margin: auto;
+    display: flex;
+    /* max-width: 1200px; */
+    /* overflow: hidden; */
+    /* gap: 20px; */
+    justify-content: center;
+  }
+  
+  .form-right{
+    box-sizing: border-box;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column  ;
+  }
+  .form-left{ 
+    box-sizing: border-box;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.cross-icon{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+  display: none;
+}

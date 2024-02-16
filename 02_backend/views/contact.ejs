@@ -1,0 +1,47 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+
+<body>
+
+    <section class="contact-us" id="contact-section">
+        <form id="contact" action="" method="post">
+
+            <div class="section-heading">
+                <h4>Contact us <%= name + " "+ pass%> </h4>
+                <p id="name"><%= name %></p>
+            </div>
+
+            <div class="inputField">
+                <input type="name" name="name" id="name" placeholder="Your name" autocomplete="on" required>
+                <span class="valid_info_name"></span>
+            </div>
+
+            <div class="inputField">
+                <input type="Email" name="email" id="email" placeholder="Your email" required="" />
+                <span class="valid_info_email"></span>
+            </div>
+
+            <div class="inputField">
+                <textarea name="message" id="message" placeholder="Your message"></textarea>
+                <span class="valid_info_message"></span>
+            </div>
+
+            <div class="inputField btn">
+                <button type="submit" id="form-submit" class="main-gradient-button" disabled>Send a message</button>
+            </div>
+
+        </form>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <script src="/javascripts/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<% include ./partials/header.ejs %>
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+
+    <div class="container">
+        <div class="content">
+            <!--pinterest logo-->
+            <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo"
+                class="img1" />
+            <p class="header">login Account <br> to see more</p>
+            <% if(errors.length>0) {%>
+                <p class="error">
+                    <%= errors %>
+                </p>
+            <% } %>
+                    <form action="/login" method="post">
+                        <!-- <input required name="username" type="text" placeholder="Username" class="detail" /><br /> -->
+                        <input required name="email" type="text" placeholder="Email" class="detail" /><br />
+
+                        <input required name="password" type="password" placeholder="Password" class="detail" />
+                        <input class="btn int" type="submit" value="Login Account">
+                    </form>
+                    <h4 style="cursor: pointer;"></h4>
+                    <a href="/forgot" class="forpass">Forgot your password?</a>
+                    <footer>
+                        <p>
+                            By continuing, you agree to Pinterest's
+                            <b>Terms of Service, Privacy policy.</b>
+                        </p>
+                        <p>Not on Pinterest yet? <a href="/register" style="text-decoration: none;">Create Account</a>
+                        </p>
+                        <hr />
+                    </footer>
+        </div>
+    </div>
+    <a href="/register" class="upbtn">Register</a>
+    <% include ./partials/footer.ejs %>

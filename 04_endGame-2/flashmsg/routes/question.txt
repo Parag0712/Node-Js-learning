@@ -1,0 +1,6 @@
+//Regex
+//^ - shuruaat aisi ho
+
+^HellO$
+
+$ - ans aisa ho

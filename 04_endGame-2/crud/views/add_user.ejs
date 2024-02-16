@@ -1,0 +1,34 @@
+<%- include('Layout/header') %>
+
+    <div class="container">
+        <div class="row  justify-content-center  mt-5">
+            <div class="col-lg-6">
+                <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+                    <h1 class="h3 mb-3 fw-normal">Add User</h1>
+
+                    <div class="form-floating mb-2">
+                        <input required name="name" type="text" class="form-control" id="floatingInput"
+                            placeholder="Enter Name">
+                        <label for="floatingInput">Enter Name</label>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <input required name="email" type="email" class="form-control" id="floatingPassword"
+                            placeholder="Enter Email">
+                        <label for="floatingPassword">Enter Email</label>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <input required name="number" type="Enter Number" class="form-control" id="floatingPassword"
+                            placeholder="num">
+                        <label for="floatingPassword">Enter Number</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Select Image</label>
+                        <input required name="image" class="form-control" type="file" id="formFile">
+                    </div>
+                    <button class="btn btn-primary w-100 py-2" type="submit">Add User</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include('Layout/footer') %>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+
+<body>
+
+    
+    <%- include('layout/menu') %>
+
+
+            <section style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    ">
+    
+                <div class="box1 box">
+                    <div class="content">
+                        <div class="image">
+                            <img src="https://i.postimg.cc/bryMmCQB/profile-image.jpg" alt="Profile Image">
+                        </div>
+                        <div class="level">
+                            <p>@<%= user.username %>
+                            </p>
+                        </div>
+                        <div class="text">
+                            <p class="name">
+                                <%= user.fullname %>
+                            </p>
+                            <p class="job_title">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <p class="job_discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+                                atque,
+                                ipsam a amet laboriosam eligendi.</p>
+                            <div class="button">
+                                <div>
+                                    <button class="connect" type="button">Account Settings</button>
+                                </div>
+                            </div>
+
+                            <form action="/upload" method="POST" enctype="multipart/form-data">
+                                <input type="text" name="posttext" placeholder="Some caption" />
+                                <input type="file" name="postimage" />
+                                <button style="outline: none; border: none; background-color: red; color: white;"
+                                    class="connect" type="submit">Upload</button>
+                            </form>
+                        </div>
+                        <!-- <div class="icons">
+                    <button>
+                        <ion-icon name="logo-dribbble"></ion-icon>
+                    </button>
+                    <button>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </button>
+                    <button>
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </button>
+                    <button>
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </button>
+                    <button>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </button>
+                    <button>
+                        <ion-icon name="logo-behance"></ion-icon>
+                    </button>
+                </div> -->
+                    </div>
+                </div>
+                <%- include('layout/feed') %>
+            </section>
+
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
